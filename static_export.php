@@ -4,9 +4,9 @@
 
 // Define paths
 define('PROJECT_ROOT', __DIR__);
-define('PUBLIC_DIR', PROJECT_ROOT . '/public');
+define('PUBLIC_DIR', PROJECT_ROOT); 
 define('DIST_DIR', PROJECT_ROOT . '/dist');
-define('INCLUDES_DIR', PROJECT_ROOT . '/includes');
+define('INCLUDES_DIR', PROJECT_ROOT . '/../includes');
 
 // Mock SITE_URL and UPLOAD_URL for the export context
 define('SITE_URL', ''); 
@@ -35,26 +35,36 @@ if (is_dir(DIST_DIR)) {
 }
 mkdir(DIST_DIR, 0755, true);
 
-// 2. Copy Assets
-$dirsToCopy = [
-    'css',
-    'js',
-    'images',
-    'uploads',
-    'uploadsfaculty',
-    'uploadsgallery'
-];
+// 2. Copy Assets and Reorganize
+// Standard assets
+$standardDirs = ['css', 'js', 'images'];
+foreach ($standardDirs as $dir) {
+    echo "Copying $dir...\n";
+    recursiveCopy(PUBLIC_DIR . '/' . $dir, DIST_DIR . '/' . $dir);
+}
 
-foreach ($dirsToCopy as $dir) {
-    $src = PUBLIC_DIR . '/' . $dir;
-    $dst = DIST_DIR . '/' . $dir;
-    
-    if (is_dir($src)) {
-        echo "Copying $dir...\n";
-        recursiveCopy($src, $dst);
-    } else {
-        echo "Warning: Directory $dir not found in public.\n";
-    }
+// Uploads - we need to merge uploadsgallery/faculty into dist/uploads/
+// First copy the base uploads directory
+echo "Copying uploads...\n";
+recursiveCopy(PUBLIC_DIR . '/uploads', DIST_DIR . '/uploads');
+
+// Now merge the other folders into dist/uploads/
+// uploadsgallery -> dist/uploads/gallery
+$gallerySrc = PUBLIC_DIR . '/uploadsgallery';
+$galleryDst = DIST_DIR . '/uploads/gallery';
+if (is_dir($gallerySrc)) {
+    echo "Merging uploadsgallery into uploads/gallery...\n";
+    if (!is_dir($galleryDst)) mkdir($galleryDst, 0755, true);
+    recursiveCopy($gallerySrc, $galleryDst);
+}
+
+// uploadsfaculty -> dist/uploads/faculty
+$facultySrc = PUBLIC_DIR . '/uploadsfaculty';
+$facultyDst = DIST_DIR . '/uploads/faculty';
+if (is_dir($facultySrc)) {
+    echo "Merging uploadsfaculty into uploads/faculty...\n";
+    if (!is_dir($facultyDst)) mkdir($facultyDst, 0755, true);
+    recursiveCopy($facultySrc, $facultyDst);
 }
 
 // 3. Render Pages
