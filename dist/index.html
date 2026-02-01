@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Phoolbari School - Providing quality education and nurturing young minds in a modern learning environment">
+    <title>Home - Phoolbari School</title>
+    
+    <!-- Critical CSS Inline -->
+    <style>/* Critical CSS - Inline in <head> for 14KB performance target
+ * Only above-the-fold styles, <4KB uncompressed
+ */
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f5f5
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem
+}
+
+main {
+  padding-top: 90px;
+  min-height: 60vh
+}
+
+main section {
+  margin: 2rem 0
+}
+
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: .9rem;
+  transition: opacity .2s
+}
+
+nav a:hover {
+  opacity: .8
+}
+
+/* Notices Ticker */
+.notice-bar {
+  background: #f39c12;
+  color: #fff;
+  padding: .5rem 0;
+  overflow: hidden
+}
+
+.notice-content {
+  white-space: nowrap;
+  animation: scroll 30s linear infinite
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%)
+  }
+
+  100% {
+    transform: translateX(-100%)
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: .9
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: .9rem;
+  transition: background .2s
+}
+
+.btn:hover {
+  background: #2980b9
+}
+
+.btn-primary {
+  background: #27ae60
+}
+
+.btn-primary:hover {
+  background: #229954
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem
+}
+
+.card h3 {
+  margin-bottom: .5rem;
+  color: #2c3e50
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0
+}
+
+/* Footer */
+/* Footer */
+.footer-modern {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 3rem 0 1rem;
+  margin-top: 4rem
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 2rem
+}
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  font-weight: 600
+}
+
+.footer-brand .footer-logo {
+  margin-bottom: 1rem
+}
+
+.footer-tagline {
+  color: #cbd5e0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-style: italic
+}
+
+.footer-social h4 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: #fff;
+  transition: all 0.3s ease
+}
+
+.social-links a:hover {
+  background: #059669;
+  transform: translateY(-2px)
+}
+
+.footer-links ul,
+.contact-info {
+  list-style: none;
+  padding: 0
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem
+}
+
+.footer-links a {
+  color: #cbd5e0;
+  text-decoration: none;
+  transition: color 0.2s ease
+}
+
+.footer-links a:hover {
+  color: #fff
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #cbd5e0
+}
+
+.contact-info i {
+  font-size: 1.125rem;
+  color: #059669;
+  margin-top: 0.125rem;
+  flex-shrink: 0
+}
+
+.contact-info a {
+  color: #cbd5e0;
+  text-decoration: none
+}
+
+.contact-info a:hover {
+  color: #fff
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.875rem
+}
+
+/* Desktop footer - 3 columns */
+@media(min-width:769px) {
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr 1.5fr !important;
+    gap: 3rem !important
+  }
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .hero h1 {
+    font-size: 1.8rem
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: .5rem
+  }
+
+  .grid {
+    grid-template-columns: 1fr
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem
+  }
+
+  .footer-modern {
+    padding: 2rem 0 1rem;
+    margin-top: 2rem
+  }
+}</style>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Deferred CSS -->
+    <link rel="stylesheet" href="/css/header-styles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/mission-vision.css">
+    <link rel="stylesheet" href="/css/principal-message.css">
+    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+    
+    <!-- Preconnect for performance -->
+    <link rel="dns-prefetch" href="//">
+    
+    <!-- Theme Toggle Script (load early) -->
+    <script src="/js/theme-toggle.js" defer></script>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header>
+        <div class="container header-content">
+            <!-- Hamburger Menu Button (Mobile Only) -->
+            <button class="hamburger-menu" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <img src="/images/logo.png" alt="Phoolbari School Logo" class="logo-img">
+                <span class="logo-text">Phoolbari School</span>
+            </a>
+            
+            <!-- Desktop Horizontal Navigation -->
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="/about.html" class="">About Us</a></li>
+                    <li><a href="/academics.html" class="">Programs</a></li>
+                    <li><a href="/admissions.html" class="">Admission</a></li>
+                    <li><a href="/faculty.html" class="">Faculty</a></li>
+                    <li><a href="/news-events.html" class="">News/Events</a></li>
+                    <li><a href="/gallery.html" class="">Gallery</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Sidebar Navigation -->
+    <nav class="sidebar-nav">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+        </div>
+        <ul>
+            <li><a href="/" class="">Home</a></li>
+            <li><a href="/about.html" class="">About Us</a></li>
+            <li><a href="/academics.html" class="">Programs</a></li>
+            <li><a href="/admissions.html" class="">Admission</a></li>
+            <li><a href="/faculty.html" class="">Faculty</a></li>
+            <li><a href="/news-events.html" class="">News / Events</a></li>
+            <li><a href="/gallery.html" class="">Gallery</a></li>
+            <li><a href="/contact.html" class="">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Sidebar Backdrop -->
+    <div class="sidebar-backdrop"></div>
+    
+    <!-- Sidebar Menu Script -->
+    <script src="/js/sidebar-menu.js"></script>
+
+<!-- Notice Ticker -->
+
+<!-- Modern Hero Section -->
+<section class="hero-modern" 
+         style="background-image: url('uploads/gallery/697711313adf0_1769410865.png')"
+         data-hero-images='["uploads\/gallery\/697711313adf0_1769410865.png","uploads\/gallery\/6977164e92a04_1769412174.jpg","uploads\/gallery\/697718091e299_1769412617.png","uploads\/gallery\/69771819d8f18_1769412633.png","uploads\/gallery\/69771819dbb71_1769412633.jpg"]'>
+    <div class="hero-overlay"></div>
+    <div class="particles-container"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Welcome to Phoolbari School</h1>
+        <p class="hero-subtitle">Empowering minds, shaping futures through excellence in education</p>
+        
+        <div class="hero-cta">
+            <a href="/admissions.html" class="btn-hero-primary">Apply for Admission</a>
+            <a href="/about.html" class="btn-hero-secondary">Discover Our Story</a>
+        </div>
+    </div>
+    
+    <!-- Carousel Indicators (populated by hero-rotator.js) -->
+    <div class="hero-indicators"></div>
+    
+    <div class="hero-scroll-indicator">
+        <span>Scroll to explore</span>
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14m0 0l-7-7m7 7l7-7"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main>
+    <div class="container">
+        
+        <!-- Campus Highlights Slider -->
+                <section id="campus" class="section-modern campus-section" data-animate="fade-in">
+            <h2 class="section-title-modern">Our Vibrant Campus</h2>
+            <p class="section-subtitle">Experience the environment where learning comes to life</p>
+            
+            <div class="fade-slider">
+                                <div class="slide">
+                    <img src="uploads/gallery/697711313adf0_1769410865.png" 
+                         alt="5"
+                         loading="lazy">
+                </div>
+                                <div class="slide">
+                    <img src="uploads/gallery/6977164e92a04_1769412174.jpg" 
+                         alt="3"
+                         loading="lazy">
+                </div>
+                                <div class="slide">
+                    <img src="uploads/gallery/697718091e299_1769412617.png" 
+                         alt="4"
+                         loading="lazy">
+                </div>
+                                <div class="slide">
+                    <img src="uploads/gallery/69771819d8f18_1769412633.png" 
+                         alt="2"
+                         loading="lazy">
+                </div>
+                                <div class="slide">
+                    <img src="uploads/gallery/69771819dbb71_1769412633.jpg" 
+                         alt="1"
+                         loading="lazy">
+                </div>
+                            </div>
+        </section>
+                
+        <!-- Mission & Vision Sections -->        
+        <!-- Our Vision -->
+        <section id="vision" class="section-modern mission-vision-section" data-animate="fade-in">
+            <div class="mv-container">
+                <div class="mv-content" data-scroll-animation="slide-left">
+                    <div class="mv-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" fill="rgba(212, 175, 55, 0.2)" stroke="#D4AF37" stroke-width="2"/>
+                            <path d="M30 15C21.7 15 15 21.7 15 30C15 38.3 21.7 45 30 45C38.3 45 45 38.3 45 30C45 21.7 38.3 15 30 15ZM30 40C24.5 40 20 35.5 20 30C20 24.5 24.5 20 30 20C35.5 20 40 24.5 40 30C40 35.5 35.5 40 30 40ZM30 25C27.2 25 25 27.2 25 30C25 32.8 27.2 35 30 35C32.8 35 35 32.8 35 30C35 27.2 32.8 25 30 25Z" fill="#D4AF37"/>
+                        </svg>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <p>We envision Phoolbari School as a dynamic and inspiring educational institution that sets an example for the learning community.</p>
+                    <p>We are committed to providing an outstanding learning environment to our students, to enable them to excel and thrive in a complex, constantly changing world, getting more interconnected by the day.</p>
+                </div>
+                                <div class="mv-image-wrapper" data-scroll-animation="slide-right">
+                    <div class="blob-shape blob-1">
+                        <img src="uploads/gallery/697711313adf0_1769410865.png" alt="Our Vision" loading="lazy">
+                    </div>
+                </div>
+                            </div>
+        </section>
+        
+        <!-- Our Mission -->
+        <section id="mission" class="section-modern mission-vision-section reverse" data-animate="fade-in">
+            <div class="mv-container">
+                                <div class="mv-image-wrapper" data-scroll-animation="slide-left">
+                    <div class="blob-shape blob-2">
+                        <img src="uploads/gallery/697711313adf0_1769410865.png" alt="Our Mission" loading="lazy">
+                    </div>
+                </div>
+                                <div class="mv-content" data-scroll-animation="slide-right">
+                    <div class="mv-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="28" fill="rgba(139, 21, 56, 0.2)" stroke="#8B1538" stroke-width="2"/>
+                            <path d="M30 15L35 25H45L37 32L40 43L30 37L20 43L23 32L15 25H25L30 15Z" fill="#8B1538"/>
+                        </svg>
+                    </div>
+                    <h2>Our Mission</h2>
+                    <p>The mission of Phoolbari School is to produce lifelong learners with a value system that turns them into good human beings.</p>
+                    <p>Honesty, integrity, and sincerity are values that form the strong foundation on which we build an educational process, culminating in academic and personal success of our students.</p>
+                    <p>To this end, we make use of the best educational practices and a rich curriculum. Added to this, we plan on collaborating with all stakeholders including students, parents, families, business houses, civic organizations, higher education institutions and the community at large.</p>
+                </div>
+            </div>
+        </section>
+        
+    </div><!-- End Main Container temporarily -->
+
+    <!-- Values Section with Lottie -->
+    <section id="values" class="section-modern values-section" data-animate="fade-in" data-delay="100">
+        <div style="max-width: 1600px; margin: 0 auto; padding: 0 1.5rem;">
+            <h2 class="section-title-modern">Our Core Values</h2>
+            <p class="section-subtitle">Building character and excellence in every student</p>
+            
+            <div class="values-grid">
+                <div class="value-card" data-animate="slide-up" data-delay="0">
+                    <div class="lottie-wrapper">
+                        <lottie-player 
+                            src="https://assets2.lottiefiles.com/packages/lf20_u4jjb9bd.json"
+                            background="transparent"
+                            speed="0.8"
+                            style="width: 120px; height: 120px;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                        <div class="lottie-fallback" style="display:none;">📚</div>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>Fostering a love for learning through innovative teaching methods and comprehensive curriculum</p>
+                </div>
+                
+                <div class="value-card" data-animate="slide-up" data-delay="150">
+                    <div class="lottie-wrapper">
+                        <lottie-player 
+                            src="https://assets2.lottiefiles.com/packages/lf20_w51pcehl.json"
+                            background="transparent"
+                            speed="0.8"
+                            style="width: 120px; height: 120px;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                        <div class="lottie-fallback" style="display:none;">⚽</div>
+                    </div>
+                    <h3>Holistic Development</h3>
+                    <p>Nurturing physical fitness, creativity, and personal growth beyond academics</p>
+                </div>
+                
+                <div class="value-card" data-animate="slide-up" data-delay="300">
+                    <div class="lottie-wrapper">
+                        <lottie-player 
+                            src="https://assets10.lottiefiles.com/packages/lf20_w98qte06.json"
+                            background="transparent"
+                            speed="0.8"
+                            style="width: 120px; height: 120px;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                        <div class="lottie-fallback" style="display:none;">💻</div>
+                    </div>
+                    <h3>Modern Learning</h3>
+                    <p>Embracing technology and innovation to prepare students for the future</p>
+                </div>
+                
+                <div class="value-card" data-animate="slide-up" data-delay="450">
+                    <div class="lottie-wrapper">
+                        <lottie-player 
+                            src="https://assets7.lottiefiles.com/packages/lf20_touohxv0.json"
+                            background="transparent"
+                            speed="0.8"
+                            style="width: 120px; height: 120px;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                        <div class="lottie-fallback" style="display:none;">🤝</div>
+                    </div>
+                    <h3>Community Spirit</h3>
+                    <p>Building strong relationships and fostering a supportive learning community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Container was closed above -->
+
+    <!-- Principal's Message Section (Full Width) -->
+        <section class="principal-message-section">
+        <div class="pm-container">
+            <div class="pm-content">
+                <span class="pm-label">Message from the Principal</span>
+                <h2>Message from the Principal</h2>
+                <p>When it comes to our sustained efforts aimed at positioning Phoolbari School as an educational institution of repute, we start by asking ourselves some fundamental questions - how can we prepare our students for the disruptions that is set to characterize the 21st Century? What specific competencies do they need to navigate a world that is increasingly complex and interconnected?</p> 
+                <p>We believe that the answer lies in a holistic approach to education that balances academic rigor with character development.</p>
+                
+                <a href="/message-from-principal.html" class="pm-link">
+                    Read More <span>→</span>
+                </a>
+                
+                <div class="pm-author">
+                    <span class="pm-name">Eren Yeager</span>
+                    <span class="pm-title">Principal</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pm-image-wrapper">
+            <div class="pm-image-bg">
+                                    <img src="uploads/gallery/6978fbcd064f9_1769536461.jpeg" alt="Principal" loading="lazy">
+                            </div>
+        </div>
+    </section>
+
+    <div class="container"><!-- Re-open Container for subsequent sections -->
+    
+    <!-- Featured News & Events -->
+            <section id="news" class="section-modern" data-animate="fade-in" data-delay="100">
+            <h2 class="section-title-modern">Latest News & Events</h2>
+            <p class="section-subtitle">Stay connected with what's happening at our school</p>
+            
+            <div class="news-grid-modern">
+                                <div class="news-card-modern" data-animate="slide-up" data-delay="0">
+                                        <div class="news-content-modern">
+                        <h3>holiiiiiiiiiiiiiiiiiiiiiiiiiiii</h3>
+                                                <p class="news-date-modern">
+                            📅 15 Feb 2026, 12:00 AM                        </p>
+                                                <p>ladduuuuuuuuuuuuuuuuu khaaaaaaaauuuuuuuuuuuuuu</p>
+                        <a href="/news-events.php?id=2" class="link-arrow">
+                            Read more <span>→</span>
+                        </a>
+                    </div>
+                </div>
+                            </div>
+            
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="/news-events.html" class="btn-secondary-modern">View All Updates</a>
+            </div>
+        </section>
+                
+        <!-- Quick Access Cards -->
+        <section id="quick-access" class="section-modern" data-animate="fade-in" data-delay="100">
+            <h2 class="section-title-modern">Quick Access</h2>
+            <p class="section-subtitle">Everything you need, just a click away</p>
+            
+            <div class="quick-access-grid">
+                <a href="/notices.html" class="quick-card" data-animate="slide-up" data-delay="0">
+                    <div class="quick-icon">📋</div>
+                    <h3>Notices</h3>
+                    <p>View important announcements and circulars</p>
+                </a>
+                
+                <a href="/admissions.html" class="quick-card" data-animate="slide-up" data-delay="100">
+                    <div class="quick-icon">🎓</div>
+                    <h3>Admissions</h3>
+                    <p>Learn about our admission process and apply</p>
+                </a>
+                
+                <a href="/faculty.html" class="quick-card" data-animate="slide-up" data-delay="200">
+                    <div class="quick-icon">👨‍🏫</div>
+                    <h3>Our Faculty</h3>
+                    <p>Meet our experienced and dedicated teachers</p>
+                </a>
+                
+                <a href="/downloads.html" class="quick-card" data-animate="slide-up" data-delay="300">
+                    <div class="quick-icon">📥</div>
+                    <h3>Downloads</h3>
+                    <p>Access forms, documents, and resources</p>
+                </a>
+            </div>
+        </section>
+        
+    </div>
+</main>
+
+<!-- Load Scripts -->
+<script src="/js/hero-rotator.js"></script>
+<script src="/js/hero-blur.js"></script>
+<script src="/js/particles-simple.js" defer></script>
+<script src="/js/slider.js" defer></script>
+<script src="/js/lottie-loader.js" defer></script>
+<script src="/js/animations.js" defer></script>
+<script src="/js/scroll-animations.js" defer></script>
+
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Logo & Tagline -->
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo">
+                        <img src="/images/logo.png" alt="Phoolbari School Logo" style="width: 80px; height: 80px; border-radius: 8px; background: white; padding: 8px;">
+                    </div>
+                    <p class="footer-tagline">"Helping Students Grow Into Leaders of Today and Tomorrow"</p>
+                    <div class="footer-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/PhoolbariSchool" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/phoolbarischool" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/PhoolbariSchool" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Useful Links -->
+                <div class="footer-col footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/academics.html">Programs</a></li>
+                        <li><a href="/admissions.html">Admission</a></li>
+                        <li><a href="/faculty.html">Faculty</a></li>
+                        <li><a href="/news-events.html">News/Events</a></li>
+                        <li><a href="/downloads.html">Student Forms</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Us -->
+                <div class="footer-col footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dailekh Bajar, Nepal</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@phoolbarischool.edu.np">info@phoolbarischool.edu.np</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01-4701500, 4701501</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Phoolbari School. All rights reserved.</p>
+                <p class="footer-credit">Powered by <strong>THE KRI</strong> and <strong>SEXY NISHAN</strong></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Deferred JavaScript -->
+    <script src="/js/header-scroll.js"></script>
+    <script src="/js/main.js" defer></script>
+</body>
+</html>

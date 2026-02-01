@@ -1,0 +1,267 @@
+/* ==================================
+   PRINCIPAL'S MESSAGE SECTION
+   ================================== */
+
+.principal-message-section {
+    position: relative;
+    padding: 6rem 0;
+    /* Default to Light Mode (Transparent for seamless look) */
+    background-color: transparent;
+    color: #333333;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* WIDER CONTAINER - Refined based on user feedback */
+.pm-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    /* Much wider max-width */
+    margin: 0 auto;
+    padding: 0 4rem;
+    /* More horizontal padding */
+    position: relative;
+    z-index: 2;
+}
+
+/* Text Content - Left Side */
+.pm-content {
+    flex: 1;
+    padding-right: 6rem;
+    max-width: 55%;
+    background: transparent !important;
+    /* Ensure no background box */
+}
+
+.pm-label {
+    font-size: 1.1rem;
+    color: var(--primary, #8B1538);
+    /* Maroon in light mode */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.pm-content h2 {
+    font-family: var(--font-heading, "Outfit", sans-serif);
+    font-size: 3rem;
+    /* Slightly larger */
+    font-weight: 700;
+    color: #1a1a1a;
+    /* Dark text in light mode */
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+/* QUOTE STYLING - Bold, Italic, Quotes */
+.pm-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+    font-style: italic;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Add quotes */
+.pm-content p::before {
+    content: "“";
+    font-size: 1.5em;
+    line-height: 0;
+    vertical-align: -2px;
+    margin-right: 4px;
+}
+
+.pm-content p::after {
+    content: "”";
+    font-size: 1.5em;
+    line-height: 0;
+    vertical-align: -5px;
+    margin-left: 2px;
+}
+
+.pm-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary, #8B1538);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: color 0.3s ease;
+    font-style: normal;
+    /* Reset font style for link */
+}
+
+.pm-link span {
+    margin-left: 8px;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.pm-link:hover {
+    color: var(--primary-dark, #6B0F2A);
+}
+
+.pm-link:hover span {
+    transform: translateX(5px);
+}
+
+.pm-author {
+    margin-top: 2rem;
+    font-style: normal;
+    /* Reset font style */
+}
+
+.pm-name {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.pm-title {
+    display: block;
+    font-size: 1rem;
+    color: #666666;
+    margin-top: 4px;
+    transition: color 0.3s ease;
+}
+
+/* Image Wrapper - Right Side (Curved) */
+.pm-image-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    z-index: 1;
+}
+
+.pm-image-bg {
+    width: 100%;
+    height: 100%;
+    /* Light mode curve background */
+    background: #e9ecef;
+    border-radius: 400px 0 0 400px;
+    /* Larger curve for wider layout */
+    overflow: hidden;
+    position: relative;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.pm-image-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* ==================================
+   DARK MODE OVERRIDES
+   ================================== */
+
+body.dark-mode .principal-message-section {
+    background-color: #2a2a2a;
+    /* Original Dark Background */
+    color: #ffffff;
+}
+
+body.dark-mode .pm-label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .pm-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .pm-content p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-mode .pm-link {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+body.dark-mode .pm-link:hover {
+    color: #ffffff;
+}
+
+body.dark-mode .pm-name {
+    color: #ffffff;
+}
+
+body.dark-mode .pm-title {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .pm-image-bg {
+    background-color: #333333;
+    /* Darker curve bg */
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1300px) {
+    .pm-container {
+        max-width: 1100px;
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .principal-message-section {
+        padding: 4rem 0;
+        text-align: center;
+    }
+
+    .pm-container {
+        flex-direction: column;
+        padding-bottom: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .pm-content {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 3rem;
+        z-index: 3;
+    }
+
+    .pm-image-wrapper {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .pm-image-bg {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .pm-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .pm-link {
+        justify-content: center;
+    }
+}
